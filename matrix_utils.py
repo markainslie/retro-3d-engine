@@ -128,22 +128,16 @@ def get_rotation_matrix(rot_vect, rot_order="xyz", inv=False):
 
     # dot product all the rotation matrices in the desired order (default is xyz)
     if rot_order == "yzx":
-        # rot_matrix = rot_x_matrix @ rot_z_matrix @ rot_y_matrix
         rot_matrix = rot_y_matrix @ rot_z_matrix @ rot_x_matrix
     elif rot_order == "zxy":
-        # rot_matrix = rot_y_matrix @ rot_x_matrix @ rot_z_matrix
         rot_matrix = rot_z_matrix @ rot_x_matrix @ rot_y_matrix
     elif rot_order == "xzy":
-        # rot_matrix = rot_y_matrix @ rot_z_matrix @ rot_x_matrix
         rot_matrix = rot_x_matrix @ rot_z_matrix @ rot_y_matrix
     elif rot_order == "yxz":
-        # rot_matrix = rot_z_matrix @ rot_x_matrix @ rot_y_matrix
         rot_matrix = rot_y_matrix @ rot_x_matrix @ rot_z_matrix
     elif rot_order == "zyx":
-        # rot_matrix = rot_x_matrix @ rot_y_matrix @ rot_z_matrix
         rot_matrix = rot_z_matrix @ rot_y_matrix @ rot_x_matrix
     else:  # xyz
-        # rot_matrix = rot_z_matrix @ rot_y_matrix @ rot_x_matrix
         rot_matrix = rot_x_matrix @ rot_y_matrix @ rot_z_matrix
 
     # for inverse-sake
