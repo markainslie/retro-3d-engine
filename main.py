@@ -34,6 +34,8 @@ class RenderScene:
         self.camera.focal_length = 1.0
         self.camera.near = 1.0
         self.camera.far = 100.0
+        self.camera.translate = [0, 0, 50]
+        self.camera.rotate = [0, 0, 0]
         self.camera.move()
 
         # light
@@ -48,8 +50,8 @@ class RenderScene:
         self.mesh.diffuse = [0.25, 0.75, 0.1]
         self.mesh.ambient = [0.5, 0.5, 0.5]
 
-        self.mesh.translate = [0, 0, -50]
-        self.mesh.rotate = [20, 0, 0]
+        self.mesh.translate = [0, 0, 0]
+        self.mesh.rotate = [0, 0, 0]
         self.mesh.move()
 
     def main_loop(self):
